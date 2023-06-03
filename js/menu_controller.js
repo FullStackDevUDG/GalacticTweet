@@ -25,3 +25,7 @@ function load(){
 	loadpage("./html/load.html");
 }
 
+function leave(){
+	loadpage("https://www.youtube.com/watch?v=mCdA4bJAGGk")
+}
+

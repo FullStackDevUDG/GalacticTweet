@@ -19,10 +19,7 @@ var MiniScreenScene = new Phaser.Class({
                 // Destruye la escena de la minipantalla
                 game.scene.remove('MiniScreen');  
             }
-
-
         });
-        
     }
 });
 
@@ -76,7 +73,13 @@ class GalacticalTweet extends Phaser.Scene{
         this.load.image('ball2', '../textures/ball2.png');
     }
     create(){
-
+        // Agafem valors de la configuracio
+        var json = localStorage.getItem("config") || '{"gravetat":800,"velocitat":150,"força":350,"distMin":100}';
+        var options_data = JSON.parse(json);
+        this.gravetat = options_data.gravetat;
+        this.VelocitatX = options_data.velocitat;
+        this.força = options_data.força;
+        this.distMinim = options_data.distMin;
         //creació mascara per realitzar la acció de l'obstacle dolent
         this.isCollision = false;
         this.maskGraphics = this.add.graphics().setDepth(1);

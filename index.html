@@ -4,6 +4,7 @@
 		<link rel="stylesheet" href="./styles/styles.css">
         <link rel="fonts" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
         <script src="./js/loader.js"></script>
+        <script src="./js/menu_controller.js"></script>
 		<title> Phaser Game - Menu </title>
 	</head>
 	<body>
@@ -15,13 +16,7 @@
             <button class="button options-button" onclick="loadpage('./html/options.html')"> 
                 Options 
             </button>
-            <button class="button scoreboard-button" onclick="loadpage('./html/rankings.html')"> 
-                Scoreboard
-            </button>
-            <button class="button saved-button" onclick="alert('Coming soon')"> 
-                Saved Games
-            </button>
-            <button class="button exit-button" onclick=""> 
+            <button class="button exit-button" onclick="leave()"> 
                 Exit 
             </button>
         </div>
