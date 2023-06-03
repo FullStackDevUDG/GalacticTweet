@@ -1,0 +1,39 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<link rel="stylesheet" href="../styles/styles.css">
+		<script src="../js/loader.js"></script>
+		<title> Phaser Game - Options </title>
+	</head>
+	<body>
+        <div class="menu-container">
+            <p class="retro-text" id="title">Game options</p>
+            <div id="options_id">
+                
+                <div class="menu-object">
+                    <label for="labelnumber">Gravity:</label>
+                    <input type="number" id="labelnumber" v-model="gravetat">
+                </div>
+                <div class="menu-object">
+                    <label for="labelnumber">Jump strenght:</label>
+                    <input type="number" id="labelnumber" v-model="força">
+                </div>
+                <div class="menu-object">
+                    <label for="labelnumber">Velocity:</label>
+                    <input type="number" id="labelnumber" v-model="velocitat">
+                </div>
+                <div class="menu-object">
+                    <label for="labelnumber">Distance between pipes:</label>
+                    <input type="number" id="labelnumber" v-model="distMin">
+                </div>		   
+                <div class="button-container">
+                    <button class="button" v-on:click="save"> Save </button>
+                    <button class="button" v-on:click="discard"> Discard </button>
+                </div>
+            </div>
+        </div>
+	</body>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+	<script src="../js/options.js"></script>
+</html>
+

@@ -1,0 +1,29 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<link rel="stylesheet" href="./styles/styles.css">
+        <link rel="fonts" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+        <script src="./js/loader.js"></script>
+		<title> Phaser Game - Menu </title>
+	</head>
+	<body>
+        <div class="menu-container">
+            <p class="retro-text" id="title">Memory menu</p>
+            <button class="button start-button" onclick="loadpage('./html/game.html')"> 
+                Start Game 
+            </button>
+            <button class="button options-button" onclick="loadpage('./html/options.html')"> 
+                Options 
+            </button>
+            <button class="button scoreboard-button" onclick="loadpage('./html/rankings.html')"> 
+                Scoreboard
+            </button>
+            <button class="button saved-button" onclick="alert('Coming soon')"> 
+                Saved Games
+            </button>
+            <button class="button exit-button" onclick=""> 
+                Exit 
+            </button>
+        </div>
+	</body>
+</html>
