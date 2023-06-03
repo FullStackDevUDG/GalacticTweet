@@ -93,3 +93,13 @@
     align-items: center;;
     text-align: center; 
   }
+  
+  .logo svg {
+    width: 100%; /* Ajusta el ancho del SVG al 100% del contenedor */
+    height: auto; /* Ajusta la altura automáticamente */
+    transform: scale(0.25); /* Escala el SVG al 80% del tamaño original */
+    margin-bottom: -100px;
+    margin-top: -100px;
+  }
+
+  
