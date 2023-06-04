@@ -1,9 +1,5 @@
 var json = localStorage.getItem("config") || '{"gravetat":800,"velocitat":150,"força":350,"distMin":100}';
 var options_data = JSON.parse(json);
-this.gravetat = options_data.gravetat;
-this.VelocitatX = options_data.velocitat;
-this.força = options_data.força;
-this.distMinim = options_data.distMin;
 var MiniScreenScene = new Phaser.Class({
     Extends: Phaser.Scene,
 
@@ -29,10 +25,10 @@ var game;
 var isPaused=false;
 var gameOptions = {
     
-    gravetat: options_data.gravetat,
-    VelocitatX: options_data.velocitat,
-    forçaClick: options_data.força,
-    distMinim: options_data.distMin,
+    gravetat: 800,
+    VelocitatX: 150,
+    forçaClick: 350,
+    distMinim: 100,
     distanciaEntreObstacles: [150, 300],
     foratObstacle: [100, 300],
 
@@ -76,8 +72,14 @@ class GalacticalTweet extends Phaser.Scene{
         this.load.image('ball2', '../textures/ball2.png');
     }
     create(){
-        // Agafem valors de la configuracio
 
+        gameOptions.gravetat = options_data.gravetat;
+        gameOptions.VelocitatX = options_data.velocitat;
+        gameOptions.forçaClick = options_data.força;
+        gameOptions.distMinim = options_data.distMin;
+        
+
+        // Agafem valors de la configuracio
         //creació mascara per realitzar la acció de l'obstacle dolent
         console.log(options_data)
         console.log(this.força)
