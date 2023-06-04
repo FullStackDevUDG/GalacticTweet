@@ -17,11 +17,7 @@ var MiniScreenScene = new Phaser.Class({
     create(){
         this.input.keyboard.on('keydown-ESC', function(event) {
             if (game.scene.isActive('MiniScreen')) {
-
                 game.scene.resume('GalacticalTweet');
-
-                // Habilita el procesamiento de entrada de la escena anterior
-    
                 // Destruye la escena de la minipantalla
                 game.scene.remove('MiniScreen');  
             }
@@ -119,13 +115,8 @@ class GalacticalTweet extends Phaser.Scene{
                 var miniScreenScene = game.scene.add('MiniScreen', MiniScreenScene, true);
                 // Pausa la escena actual
                 game.scene.pause('GalacticalTweet');
-                // Deshabilita el procesamiento de entrada de la escena actual
-                //game.input.enabled = false;
             }
-
-
         });
-
 
         this.Puntuacio = 0;
         if(localStorage.getItem(gameOptions.localStorageName) == null)
@@ -215,6 +206,7 @@ class GalacticalTweet extends Phaser.Scene{
 
         this.physics.world.collide(this.bird, this.grupBalls2, function(bird, ball2) {
             ball2.destroy();
+            this.Puntuacio+=2;
             this.bird.body.velocity.x = 0;
             this.maskGraphics.fillRect(0, 0, game.config.width, game.config.height);
             this.maskGraphics.setAlpha(1);
@@ -268,10 +260,12 @@ class GalacticalTweet extends Phaser.Scene{
     die(){
         localStorage.setItem(gameOptions.localStorageName, Math.max(this.Puntuacio, this.topPuntuacio));
         this.scene.start('GalacticalTweet');
+        alert("YOU LOSE");
+        window.location.assign("../index.html");
     }
 
     goPause(){
-        console.log("aaaa")
+        console.log("Pause")
     }
 }
 
