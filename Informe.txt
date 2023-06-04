@@ -1,3 +1,10 @@
+Introducció:
+
+La idea d'aquest videojoc sorgeix a causa de la polèmica a Twitter arran d'una de les últimes actualitzacions, concretament,
+la d'en Twitter Blue. Aquesta actualització va generar canvis significatius en el preu de les accions de Twitter, 
+i és per això que el nostre videojoc representa l'experiència de Twitter en els últims mesos després d'aquesta última actualització.
+
+
 Descripció del disseny del joc:
 
 El joc té una escena principal anomenada 'GalacticalTweet'. El jugador controla a un Tweet, representat pel 
@@ -9,7 +16,7 @@ tecla d'ESC.
 
 Descripció de les parts més rellevants de la implementació:
 
-- S'usa localStorage per emmagatzemar la puntuació màxima del jugador.
+- S'usa localStorage per emmagatzemar la puntuació màxima del jugador i les opcions que selecciona.
 - Es crea un grup d'obstacles i es generen obstacles aleatoris utilitzant una funció posarObstacles.
 - Es detecten col·lisions entre l'ocell i els obstacles, així com entre l'ocell i altres elements com boles de bonificació i boles dolentes.
 - Es controla el moviment vertical de l'ocell mitjançant la gravetat i l'impuls donat pel clic del jugador a la pantalla.
@@ -17,7 +24,6 @@ Descripció de les parts més rellevants de la implementació:
 - S'utilitza una funció "die" per finalitzar el joc i guardar la puntuació màxima a localStorage.
 - S'implementa una funcionalitat de pausa que es pot activar prement la tecla d'ESC. Quan és pausa el joc, s'afegeix una nova escena 
 anomenada 'MiniScreen', es resumeix l'escena principal i es destrueix l'escena 'MiniScreen' quan es reprèn el joc
-
 
 
 Conclusions i problemes trobats:
@@ -28,3 +34,17 @@ joc hem notat que, malgrat alguns problemes que ara explicarem, teníem una sens
 El primer problema el vam trobar amb la generació d'obstacles nous. Després de treballar en una funció 
 vam aconseguir el resultat final comparant amb diferents codis de jocs fets en Phaser. Després d'això la
 posició aleatòria de generació dels obstacles també va suposar un altre repte.
+
+Per altra banda, també vam tenir dificultats a l'hora de crear el logotip, ja que no sabíem quin estil o 
+dinàmica volíem seguir, ja que volíem que fos coherent amb el nostre joc. Així doncs, vam decidir replicar
+elements del nostre videojoc quan l'usuari posa el ratolí per damunt.
+
+
+Manual d'usuari:
+
+El manual és realment senzill. Quan el jugador es trobi al menú, simplement ha de prémer "Start Game". 
+Un cop dins, amb el clic esquerre o dret del ratolí, l'ocell anirà fent salts en funció de les opcions que hagi escollit. 
+Com ja hem comentat anteriorment, si el jugador prem "ESC", el videojoc es pausarà, i si ho torna a prémer, es reprendrà.
+En les opcions, el jugador pot modificar alguns paràmetres del videojoc. Si es realitzen canvis de poques unitats, 
+no es veuran gaire afectats. Normalment, el canvi ha de ser superior a 100 per notar-lo de manera significativa.
+
