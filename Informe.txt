@@ -1,0 +1,30 @@
+Descripció del disseny del joc:
+
+El joc té una escena principal anomenada 'GalacticalTweet'. El jugador controla a un Tweet, representat pel 
+logo de Twitter, que es mou verticalment amb la gravetat i ha d'evitar obstacles que es mouen horitzontalment
+a través de la pantalla. El jugador pot fer clic a la pantalla per impulsar l'ocell cap amunt i evitar 
+col·lisions amb els obstacles. El joc també té una funcionalitat de pausa, que es pot activar prement la 
+tecla d'ESC.
+
+
+Descripció de les parts més rellevants de la implementació:
+
+- S'usa localStorage per emmagatzemar la puntuació màxima del jugador.
+- Es crea un grup d'obstacles i es generen obstacles aleatoris utilitzant una funció posarObstacles.
+- Es detecten col·lisions entre l'ocell i els obstacles, així com entre l'ocell i altres elements com boles de bonificació i boles dolentes.
+- Es controla el moviment vertical de l'ocell mitjançant la gravetat i l'impuls donat pel clic del jugador a la pantalla.
+- Es defineixen funcions per canviar la gravetat de l'ocell temporalment i reduir la velocitat dels obstacles durant un cert temps.
+- S'utilitza una funció "die" per finalitzar el joc i guardar la puntuació màxima a localStorage.
+- S'implementa una funcionalitat de pausa que es pot activar prement la tecla d'ESC. Quan és pausa el joc, s'afegeix una nova escena 
+anomenada 'MiniScreen', es resumeix l'escena principal i es destrueix l'escena 'MiniScreen' quan es reprèn el joc
+
+
+
+Conclusions i problemes trobats:
+
+En general el desenvolupament del joc ha sigut molt enriquidor. Al no tenir una mecànica molt complexa de 
+joc hem notat que, malgrat alguns problemes que ara explicarem, teníem una sensació d'avanç constant.
+
+El primer problema el vam trobar amb la generació d'obstacles nous. Després de treballar en una funció 
+vam aconseguir el resultat final comparant amb diferents codis de jocs fets en Phaser. Després d'això la
+posició aleatòria de generació dels obstacles també va suposar un altre repte.
